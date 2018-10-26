@@ -1,0 +1,22 @@
+{
+  "name": "warframebuilds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuomasMoilanen/warframebuilds.git"
+  },
+  "author": "Tuomas Moilanen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TuomasMoilanen/warframebuilds/issues"
+  },
+  "homepage": "https://github.com/TuomasMoilanen/warframebuilds#readme",
+  "dependencies": {
+    "warframe-items": "^1.111.0"
+  }
+}
