@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/TuomasMoilanen/warframebuilds#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "warframe-items": "^1.111.0"
   }
 }
