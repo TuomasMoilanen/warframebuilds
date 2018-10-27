@@ -5,26 +5,14 @@ const url = require('url');
 const fs = require('fs');
 const path = require('path');
 
+const express = require('express');
+const app = express();
+
 const host = 'localhost';
 const port = 3000;
 
 const homepage = path.join(__dirname, 'index.html');
 
-const server = http.createServer((req, res)=>{
-	let route = url.parse(req.url).pathname;
+app.get('/', (req, res)=>res.sendFile(homepage));
 
-	if(route === '/'){
-		fs.readFile(homepage, 'utf-8', (err, data)=>{
-			if(err){
-				res.statusCode = 404;
-				res.end(err.message);
-			}
-			else{
-				res.writeHead(200, {'content-type':'text/html', 'content-length':data.length,
-					'Access-Control-Allow-Origin':'*'});
-				res.end(data);
-			}
-		});
-	}
-});
-server.listen(port, host,()=> console.log('Server running.'));
+app.listen(port, host,()=> console.log('Server running.'));
